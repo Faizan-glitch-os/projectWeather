@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @var WorldInfo $result
+ * @var WeatherInfo $result
  */
 ?>
 
@@ -26,12 +26,12 @@
                 <?= $result->city ?>
             </div>
             <div class="top-bar__date">
-                Monday, 25<sup>th</sup>
+                <?= $weekDay ?>, <?= $monthDay ?>
             </div>
         </div>
         <div class="weather-info">
             <img class="weather-info__image" src="images/<?= $result->type ?>/large.svg" alt="Stormy" />
-            <h1 class="weather-info__temperature">40°</h1>
+            <h1 class="weather-info__temperature"><?= $result->temperature ?>°</h1>
             <p class="weather-info__desc">
                 <img class="icon" src="images/<?= $result->type ?>/small.svg" alt="alt">
                 <?= $result->type ?>

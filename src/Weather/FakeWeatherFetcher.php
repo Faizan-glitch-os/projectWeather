@@ -9,6 +9,7 @@ class FakeWeatherFetcher implements WeatherFetcherImplement
 {
     public function fetch(string $city): WeatherInfo
     {
-        return new WeatherInfo($city, 50, 'sunny');
+        $randomTemp = rand(1, 270);
+        return new WeatherInfo($city, $randomTemp, 'sunny');
     }
 }
