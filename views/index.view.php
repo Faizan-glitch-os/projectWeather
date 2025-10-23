@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="app-container" style="background-image: url('images/<?= $result->type ?>/bg.svg'); ">
+    <div class="app-container" style="background-image: url('images/<?= strtolower($result->weather) ?>/bg.svg'); ">
         <div class="top-bar">
             <div class="top-bar__location">
                 <svg class="icon" viewBox="0 0 52.7624 72.774">
@@ -30,11 +30,11 @@
             </div>
         </div>
         <div class="weather-info">
-            <img class="weather-info__image" src="images/<?= $result->type ?>/large.svg" alt="Stormy" />
+            <img class="weather-info__image" src="images/<?= $result->weather ?>/large.svg" alt="Stormy" />
             <h1 class="weather-info__temperature"><?= $result->temperature ?>°</h1>
             <p class="weather-info__desc">
-                <img class="icon" src="images/<?= $result->type ?>/small.svg" alt="alt">
-                <?= $result->type ?>
+                <img class="icon" src="images/<?= $result->weather ?>/small.svg" alt="alt">
+                <?= $result->weather ?>
             </p>
         </div>
     </div>
