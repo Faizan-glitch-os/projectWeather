@@ -10,7 +10,5 @@ $now = new DateTime();
 $weekDay = $now->format('l');
 $monthDay = $now->format('j');
 
-var_dump($weekDay, $monthDay);
-
 
 require_once __DIR__ . '/views/index.view.php';
