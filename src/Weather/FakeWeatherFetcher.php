@@ -9,7 +9,9 @@ class FakeWeatherFetcher implements WeatherFetcherImplement
 {
     public function fetch(string $city): WeatherInfo
     {
+        $type = ['sunny', 'cloudy', 'snowy', 'stormy'];
         $randomTemp = rand(1, 270);
-        return new WeatherInfo($city, $randomTemp, 'sunny');
+        $randomType = rand(0, 3);
+        return new WeatherInfo($city, $randomTemp, $type[$randomType]);
     }
 }
